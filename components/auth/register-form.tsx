@@ -20,7 +20,7 @@ import { FormError } from "@/components/auth/form-error";
 import { FormSuccess } from "@/components/auth/form-success";
 
 import { RegisterSchema } from "@/schemas";
-import { login } from "@/actions/login";
+import {register} from "@/actions/register"
 
 export const RegisterForm = () => {
   const [error, setError] = useState<string | undefined>("");
@@ -41,7 +41,7 @@ export const RegisterForm = () => {
     setSuccess("");
 
     startTransition(() => {
-      login(values).then((data) => {
+      register(values).then((data) => {
         setError(data.error);
         setSuccess(data.success);
       });
