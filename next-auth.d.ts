@@ -6,6 +6,7 @@ declare module "next-auth" {
   interface Session {
     user: {
       role: UserRole;
+      isTwoFactorEnabled: boolean
     };
   }
 }
@@ -15,5 +16,6 @@ declare module "next-auth/jwt" {
   interface JWT {
     /** OpenID ID Token */
     role: UserRole;
+    isTwoFactorEnabled: boolean
   }
 }
