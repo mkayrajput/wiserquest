@@ -1,6 +1,5 @@
-import { Github, LifeBuoy, LogOut, Settings, User } from "lucide-react";
-
-import UserAvtar from "./UserAvtar";
+import { Github, LifeBuoy, LogOut } from "lucide-react";
+import UserAvtar from "@/components/common/UserAvtar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,25 +10,23 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export default function ManageProfileMenu() {
+export const UserOptions = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <UserAvtar />
+        <div className="flex flex-row gap-2 items-center">
+          <UserAvtar />
+          <div className="flex flex-col justify-center">
+            <h4 className="text-base font-medium">Mahender Kumar</h4>
+            <p className="text-sm font-medium text-foreground/85">
+              example.email.com
+            </p>
+          </div>
+        </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-56" align="start">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <User className="mr-2 h-4 w-4" />
-            <span>Profile</span>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Settings className="mr-2 h-4 w-4" />
-            <span>Settings</span>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup></DropdownMenuGroup>
         <DropdownMenuSeparator />
@@ -49,4 +46,4 @@ export default function ManageProfileMenu() {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};

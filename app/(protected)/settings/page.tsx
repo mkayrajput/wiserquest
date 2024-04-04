@@ -1,4 +1,5 @@
 import { auth, signOut } from "@/auth";
+import { UserOptions } from "@/components/sidebar/user-options";
 
 export default async function SettingsPage() {
   const session = await auth();
