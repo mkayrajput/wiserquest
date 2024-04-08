@@ -8,7 +8,7 @@ export const Sidebar = () => {
   return (
     <div className="flex flex-col min-h-screen py-4 justify-between items-start fixed">
       <div className="h-full">
-        <Logo />
+        <Logo showLogoLabel/>
         <Navbar />
       </div>
       <UserOptions />

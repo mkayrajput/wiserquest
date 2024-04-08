@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export const Logo = () => {
+export const Logo = ({ showLogoLabel = false }: { showLogoLabel?: boolean }) => {
   return (
     <Link
       href={"/"}
@@ -13,7 +13,9 @@ export const Logo = () => {
         <AvatarImage src="/logo-white.png" alt="@wiserquest" />
         <AvatarFallback>WQ</AvatarFallback>
       </Avatar>
-      <span className="cursor-pointer text-lg font-semibold">wiserquest</span>
+      {showLogoLabel && (
+        <span className="cursor-pointer text-lg font-semibold">wiserquest</span>
+      )}
     </Link>
   );
 };
