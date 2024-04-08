@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
   return (
-    <NavigationMenu className={cn("mt-4 min-h-96")}>
+    <NavigationMenu className={cn("my-4")} orientation="vertical">
       <NavigationMenuList className={cn("flex-col")}>
         <NavigationMenuItem className={cn("w-full")}>
           <Link href="/" legacyBehavior passHref>

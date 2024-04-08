@@ -14,7 +14,7 @@ export const UserOptions = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="flex flex-row gap-2 items-center">
+        <div className="flex flex-row gap-2 items-center cursor-pointer">
           <UserAvtar />
           <div className="flex flex-col justify-center">
             <h4 className="text-base font-medium">Mahender Kumar</h4>
